@@ -10,6 +10,8 @@ import CommandPalette from "@/components/CommandPalette";
 import ProjectDetail from "@/components/ProjectDetail";
 import AIInsights from "@/components/AIInsights";
 import { PanelLeftClose, PanelLeftOpen, Command, Loader2 } from "lucide-react";
+import TimelineView from "@/components/TimelineView";
+import ActivityFeed from "@/components/ActivityFeed";
 
 export default function Home() {
   const { sidebarOpen, setSidebarOpen, setCommandPaletteOpen, setProjects } = useNexusStore();
@@ -77,6 +79,10 @@ export default function Home() {
         );
       case "ai":
         return <AIInsights />;
+        case "timeline":
+  return <TimelineView />;
+case "activity":
+  return <ActivityFeed />;
       default:
         return (
           <div style={{
